@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Liang Yicheng's Blog"><title>会话式UI下篇：如何从包容性视角为视障人士做会话式UI ？ | 觉论</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-110175678-2','auto');ga('send','pageview');</script><script>(function(d) {
+var config = {
+kitId: 'tcu3mbx',
+scriptTimeout: 3000,
+async: true
+},
+h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);</script><meta name="generator" content="Hexo 4.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">会话式UI下篇：如何从包容性视角为视障人士做会话式UI ？</h1><a id="logo" href="/.">觉论</a><p class="description">The Sense of Design &amp; Life. |  Issei's Blog</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 主页</i></a><a href="/archives/"><i class="fa fa-archive"> 旧文</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">会话式UI下篇：如何从包容性视角为视障人士做会话式UI ？</h1><div class="post-meta">Jul 5, 2020<span> | </span><span class="category"><a href="/categories/%E8%AE%BE%E8%AE%A1/">设计</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何为视障人士做会话式UI-？"><span class="toc-number">1.</span> <span class="toc-text">如何为视障人士做会话式UI ？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#项目概要"><span class="toc-number">1.1.</span> <span class="toc-text">项目概要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对话设计"><span class="toc-number">1.1.1.</span> <span class="toc-text">对话设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#调研：视障人士的生活方式"><span class="toc-number">1.1.2.</span> <span class="toc-text">调研：视障人士的生活方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语音交互系统的结构"><span class="toc-number">1.2.</span> <span class="toc-text">语音交互系统的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#会话式UI的设计流程"><span class="toc-number">1.3.</span> <span class="toc-text">会话式UI的设计流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-从场景出发设计示例对话脚本"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.从场景出发设计示例对话脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Intents-意图-和Entities-实体"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.Intents(意图)和Entities(实体)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-完善分支对话流程"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.完善分支对话流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-怎么做语音交互原型"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.怎么做语音交互原型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-改善视障人群使用的VUI"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.改善视障人群使用的VUI</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-测试和评价VUI的原型"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.测试和评价VUI的原型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何在设计实践整合道德考量"><span class="toc-number">2.</span> <span class="toc-text">如何在设计实践整合道德考量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考文献"><span class="toc-number">2.0.1.</span> <span class="toc-text">参考文献</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/CUI.001.jpeg" alt="从包容性设计的角度来谈会话式UI"></p>
+<p>前段时间根据硕士期间的研究课题和论文成果，在某平台做过一个约30分钟的讲座，这里整理成文字与大家分享。这篇分享约5700字，阅读时间预计15分钟，分为两篇文章：</p>
+<p>上篇：「从理论和历史两个角度来谈什么是会话式UI」</p>
+<p>下篇：「如何为视障人士做会话式UI ？」</p>
+<h2 id="如何为视障人士做会话式UI-？"><a href="#如何为视障人士做会话式UI-？" class="headerlink" title="如何为视障人士做会话式UI ？"></a>如何为视障人士做会话式UI ？</h2><p>接下来，终于到了硕士研究的具体项目部分，如何为视障人士做会话式UI ？</p>
+<h3 id="项目概要"><a href="#项目概要" class="headerlink" title="项目概要"></a>项目概要</h3><p>简单介绍一下项目背景，除了前面说明的理论研究外，也有一部分实例研究证明，会话式UI，作为一种交互手段，有望支持和帮助视障、肢体残障人士、智力障碍人士和老年人的生活。根据Alisha Pradhan及其同事对残疾人使用智能扬声器的研究，结果表明，盲人和肢体残障人士可以通过智能扬声器提高生活中多方面的体验，包括独立行为支持，记忆支持，提高效率和安全性。</p>
+<p>那这是一个什么项目？简单地讲，这个系统是一项基于会话的语音助手辅助服务，一般用户和视障人士可以使用此服务，来使用航班信息查询，购票，登机，机场内导航和中转预订等一系列功能。视障人士可以在做飞机出门旅行的时候，通过手机上安装的语音助手，和机场的值机机器的语音交互功能，来完成查询、购票、登机等行为。</p>
+<p>具体项目细节可参考我的<a href="https://ryouissei.com/Airport-AI-Assistant-for-Visually-Impaired" target="_blank" rel="noopener">个人网站</a>。</p>
+<h4 id="对话设计"><a href="#对话设计" class="headerlink" title="对话设计"></a>对话设计</h4><p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/CUI-test1.gif" alt=""></p>
+<p>这是我与一位全盲的大学生测试手机上的机场语音助手的视频。这段测试对话，是使用语音助手App值机的场景。不过是测试语言为日语，以下为文字翻译（可能不适用于中文语境）。</p>
+<table>
+<thead>
+<tr>
+<th align="left">角色</th>
+<th>对话</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">系统</td>
+<td>明天终于要去高松了，○○你准备好了吗？</td>
+</tr>
+<tr>
+<td align="left">视障用户</td>
+<td>准备好了。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>明天从东京到高松的航班还没有办理值机手续，请问现在就去办理吗？</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>好的，开始值机吧。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>我知道了。需要先决定好座位。请问座位要靠窗的还是靠过道的呢？</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>请给我靠过道的。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>好的，靠过道的座位是吗。乘务员附近的11C座位，这个位置可以吗？</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>没问题。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>好的，预订了11C座位。值机手续办理成功，电子登机牌出票了。明天登机时，请把电子登机牌画面出示给工作人员。</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>好的。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>需要的时候，请对我说“拿出电子登机牌”就可以了。如果你想寄存行李，只需要把行李寄存到行李柜台即可。不过最好提前办理。</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>我知道了，谢谢。</td>
+</tr>
+</tbody></table>
+<p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/CUI-test2.gif" alt=""></p>
+<p>第二个视频是测试机场值机设备的语音交互功能的场景，视障用户到达机场后，使用值机机器来值机。除了值机的对话设计之外，还有比如机场内步行导航、出租车预约等功能的对话设计，就不一一说明 了。</p>
+<table>
+<thead>
+<tr>
+<th align="left">角色</th>
+<th>对话</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">系统</td>
+<td>请问有什么帮您的吗？</td>
+</tr>
+<tr>
+<td align="left">视障用户</td>
+<td>我想办理值机手续。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>好的，值机是吗，请问是办理哪个航空公司的值机手续呢？</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>是日本航空公司。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>好的，日本航空公司是吗。那么请把护照插入右下角的读取部。</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>放在哪里好呢？</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>屏幕右下角有一个盒子。请把有头像的那一面朝下插入。</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>好的，已经放进去了。</td>
+</tr>
+<tr>
+<td align="left">系统</td>
+<td>确认了。Kotaki先生，是10点21分去首尔的飞机对吗？</td>
+</tr>
+<tr>
+<td align="left">用户</td>
+<td>是的，没有弄错。是这个航班。</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>……</td>
+</tr>
+</tbody></table>
+<p>大家应该对这个项目有了大概的印象了。</p>
+<h4 id="调研：视障人士的生活方式"><a href="#调研：视障人士的生活方式" class="headerlink" title="调研：视障人士的生活方式"></a>调研：视障人士的生活方式</h4><p>那么我们回到一个项目的最开始，他们有什么需求？现状是什么样的。</p>
+<img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/report-the-way-of life.png" style="zoom:50%;" />
+
+<p>首先，我开始了一项调研，对象是40位视力障碍人士（问卷 + 访谈其中5位）。针对他们的病症、严重程度、是否外出、是否旅游、如何使用交通工具、是否使用数码设备、怎么使用等等方面的调查和访谈结果，制作了这份<a href="https://speakerdeck.com/ryouissei/shi-jue-zhang-hai-zhe-falsesheng-kifang-shi-jue-zhang-hai-zhe-falsewai-chu-zhuang-kuang-yadezitaruraihuniguan-surudiao-cha-repoto" target="_blank" rel="noopener">《视障人士的外出和数字生活调查报告》</a>。</p>
+<p>其中包括一些定量数据：</p>
+<ul>
+<li>后天性疾病导致的视力障碍是最常见的。</li>
+<li>在受访者中，障碍程度最高的视觉障碍者占72.5％。</li>
+<li>97.5％的视障人士每月和每周外出。他们中有70％独自外出。</li>
+<li>75％乘火车或电车出去旅行过。</li>
+<li>85％的人有在日本旅行的经验，而27.5％的人有在国外旅行的经验。</li>
+<li>手机、电脑等数字设备的使用率很高。</li>
+</ul>
+<p>和一些改善的方向</p>
+<ul>
+<li>视障者平时的生活与一般人群相同，但是有些事情他们自己无法克服，需要他人帮助。</li>
+<li>必须使用技术来支持视障者的独立性和社会参与。</li>
+<li>有必要改善数字可访问性作为基础设施。</li>
+</ul>
+<p>除了知道他们的现状和需求还是不够，毕竟不能切身体会。所以我想了一些尽量能接近的体验，试图感受视障人士是如何生活的。这段视频就是使用VR眼镜模拟「视网膜色素变性」而导致的视野变窄从而视力逐渐消失的病症，过程则是搭乘电车去羽田机场。</p>
+<p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/fieldwork.gif" alt="感受视障人士是如何生活"></p>
+<h3 id="语音交互系统的结构"><a href="#语音交互系统的结构" class="headerlink" title="语音交互系统的结构"></a>语音交互系统的结构</h3><p>了解需求也还是不够。需要正确的理解对话系统时如何运作的，才可能作出合适的设计。</p>
+<p>语音识别 ASR：将声音信息转化为文字。</p>
+<p>自然语言处理 NLP：理解人们想要表达的意思，并给出合理的反馈和信息。</p>
+<p>语音合成 TTS：指将文字转化为声音。</p>
+<p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/CUI.034.jpeg" alt="语音交互系统的结构"></p>
+<h3 id="会话式UI的设计流程"><a href="#会话式UI的设计流程" class="headerlink" title="会话式UI的设计流程"></a>会话式UI的设计流程</h3><p>会话式UI的设计过程可以粗略地可以分为这几部分：</p>
+<h4 id="1-从场景出发设计示例对话脚本"><a href="#1-从场景出发设计示例对话脚本" class="headerlink" title="1.从场景出发设计示例对话脚本"></a>1.从场景出发设计示例对话脚本</h4><p>创建一个用户角色和想定的目标使用场景。</p>
+<p>找一位朋友并在对话中扮演角色，一个人扮演用户，另一个人扮演系统。</p>
+<p>记录谈话内容。订正后就是示例对话脚本的初稿。</p>
+<p>审阅对话脚本，读出用户的台词。并在文本语音转换引擎（TTS）中播放每一句台词。如果不是很自然的话，就重新写或者使用<a href="https://cloud.google.com/text-to-speech/docs/ssml?hl=zh-cn" target="_blank" rel="noopener">SSML（语音合成标记语言）</a>改善语音的语气、停顿时间等元素。</p>
+<p>如果有不同的用户角色和场景，重复以上步骤。</p>
+<h4 id="2-Intents-意图-和Entities-实体"><a href="#2-Intents-意图-和Entities-实体" class="headerlink" title="2.Intents(意图)和Entities(实体)"></a>2.Intents(意图)和Entities(实体)</h4><p>在设计步骤1的对话脚本时要注意的是，用户的目的是什么，为了达成这个目的需要获得哪些信息和数据。这里的目的就是意图，信息和数据和就是所谓的实体。</p>
+<p><strong>Intents(意图)</strong></p>
+<p>达到用户最终目的的对话，数据和功能的组合。比如：查询天气、预约航班…</p>
+<p><strong>Entities(实体 Google平台用语)/Slots (Alexa平台用语)</strong></p>
+<p>对话中需要的数据类型。比如：时间、地点、食材…</p>
+<p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/CUI.036.jpeg" alt="Intents(意图)和Entities(实体)"></p>
+<h4 id="3-完善分支对话流程"><a href="#3-完善分支对话流程" class="headerlink" title="3.完善分支对话流程"></a>3.完善分支对话流程</h4><p>一旦有了一些示例对话脚本，就可以抽象出对话的流程和逻辑，包括主流程外的介绍流程、分支选择、错误流程、返回流程等等。在有多个功能和目的的情况下，也可以创建多个使用流程。</p>
+<p>好的设计可以在对明确定义的用户路径的需求与用户对直接指向他们想要的快捷方式的需求之间取得平衡。</p>
+<h4 id="4-怎么做语音交互原型"><a href="#4-怎么做语音交互原型" class="headerlink" title="4.怎么做语音交互原型"></a>4.怎么做语音交互原型</h4><p>与GUI一样，设计师最终也需要作出语音交互的原型，那么该如何制作呢。现在可以使用的主要是这几种，这篇文章不涉及具体用法，稍作简单的介绍。</p>
+<p>Adobe XD相信大家很熟悉，但是原型功能里adobe凭借他的云端技术硬是在设计软件里内置了语音识别和语音生成的功能，足以实现大部分的语音交互甚至带屏幕的语音交互的原型需求。</p>
+<p>Google的开发者平台，在不接入数据的情况，可以无代码实现原型制作，推荐在使用adobe XD之前试一试，了解系统的运作。</p>
+<p><a href="https://www.voiceflow.com/" target="_blank" rel="noopener">Voiceflow</a>则是以流程图的形式视觉化了交互，原型可以同步到开发者平台。</p>
+<h4 id="5-改善视障人群使用的VUI"><a href="#5-改善视障人群使用的VUI" class="headerlink" title="5.改善视障人群使用的VUI"></a>5.改善视障人群使用的VUI</h4><p>首先，根据残障程度创建个性化的对话和服务。比如，全盲人士可以完全通过的语音交互使用完整的功能，中度弱视人士可以通过一定的GUI和辅助的VUI来使用。GUI的部分，通过调节字体和颜色对比来增强可读性。</p>
+<p>第二，服务中包含的所有VUI和GUI都需完善辅助功能。比如，对应系统级别的VoiceOver；语音导航时无法分辨初始位置和方向，因此首先要显示附近的位置。第三，由于无法感同身受，所以前期调研更加需要深度的调研和共情体验。</p>
+<p>最后在语言层面，也更加需要注意对话设计的言辞中对人的尊重，和语气、韵律、说话速度的调节等等。</p>
+<h4 id="6-测试和评价VUI的原型"><a href="#6-测试和评价VUI的原型" class="headerlink" title="6.测试和评价VUI的原型"></a>6.测试和评价VUI的原型</h4><p>除了在前期设计对话时，可以通过角色扮演来测试对话流畅程度之外，业界也存在一些语音交互产品的用户评价定量方法。我从两篇相关论文中（见文末参考文献）中选出以下四种方法：</p>
+<p><a href="http://attrakdiff.de/index-en.html#tab-vergleich-vn" target="_blank" rel="noopener"><strong>AttrakDiff</strong></a></p>
+<p>AttrakDiff是HCI领域中最常用的标准化问卷之一，用于衡量体验的可用性和舒适度。 它明确关注娱乐性，还衡量产品的实用质量和整体吸引力。</p>
+<p><strong>SUISQ</strong> (The Speech User Interface Service Quality)</p>
+<p>语音用户界面服务质量（SUISQ）问卷是一种用于评估语音界面的服务质量的问卷方法。 SUISQ共有25个项目经过主成分分析验证，分为四类，包括用户目标定位，语音特征，冗长性和客户行为。SUISQ也有很多改进版本，对验证项目进行增改，具体可以参考这篇论文。</p>
+<p><img src="/Users/liangyicheng/Documents/%E8%A7%89%E8%AE%BA/20.07.01/SUISQ.png" alt="SUISQ"></p>
+<p><strong>SASSI</strong> (The Subjective Assessment of Speech System Interfaces)</p>
+<p>语音系统界面主观评估（SASSI）问卷用以评估基于VUI的主观满意度，专注于评估语音输入阶段的体验。 具体而言，通过与用户体验有关的34个项目进行评估。</p>
+<p><img src="https://ryouissei-1258199678.cos.ap-tokyo.myqcloud.com/images/SASSI.png" alt="**SASSI**"></p>
+<p><strong>SUS</strong></p>
+<p>系统可用性量表（SUS）是用于评估交互式系统可用性的最著名，使用最广泛的调查表，不仅限于对话UI的评估。在<a href="https://book.douban.com/subject/27188306/" target="_blank" rel="noopener">《语音用户界面设计》</a>这本书使用的也是这种方法，所以就不放图了，有兴趣的同学可以看看这本书。</p>
+<h2 id="如何在设计实践整合道德考量"><a href="#如何在设计实践整合道德考量" class="headerlink" title="如何在设计实践整合道德考量"></a>如何在设计实践整合道德考量</h2><blockquote>
+<p>前近代的人们，可能缺衣少食，但不大缺意义，相反，我们这个时代，什么都不缺，却常感到意义在流失。</p>
+<p>—— 陈嘉映《何为良好生活》</p>
+</blockquote>
+<p>为什么要做这个项目呢？可能是践行理念的一个实际行动吧。这个部分就不重复讲座的内容，具体可以参考我以前的一篇文章<a href="https://blog.ryouissei.com/post/2476f527.html">「Design for Well-being | 设计中的道德伦理考量」</a>。</p>
+<p>上篇：「从理论和历史两个角度来谈什么是会话式UI」</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><p>Lewis J R. Standardized questionnaires for voice interaction design[J]. Voice Interaction Design, 2016, 1(1).）</p>
+<p>Kocaballi A B, Laranjo L, Coiera E. Measuring user experience in conversational interfaces: a comparison of six questionnaires[C]</p>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Liang Yicheng</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/post/90eb5b4d.html">http://blog.ryouissei.com/post/90eb5b4d.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处。</li></ul></div><br><div class="recommended_posts"><h3>推荐阅读</h3><li><a href="http://blog.ryouissei.com/post/55996a47.html" target="_blank">会话式UI上篇：从理论和历史两个角度来谈什么是会话式UI</a></li><li><a href="http://blog.ryouissei.com/post/2faab49e.html" target="_blank">读一本小书：罗兰巴特的「符号帝国」</a></li><li><a href="http://blog.ryouissei.com/post/fb0ab8d3.html" target="_blank">面对疫情这样的复杂问题，普通人可以做什么？</a></li><li><a href="http://blog.ryouissei.com/post/cd2c2eb9.html" target="_blank">二〇一九年终总结</a></li></div><br><div class="tags"><a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a><a href="/tags/UI-UX/">UI/UX</a></div><div class="post-nav"><a href="/post/55996a47.html" class="next">会话式UI上篇：从理论和历史两个角度来谈什么是会话式UI</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8zMjg0Ni85NDA3"><script>(function(d, s) {
+   var j, e = d.getElementsByTagName(s)[0];
+   if (typeof LivereTower === 'function') { return; }
+   j = d.createElement(s);
+   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+   j.async = true;
+   e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.ryouissei.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E4%B8%8E%E6%97%85%E8%A1%8C/">生活与旅行</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%89%BA%E6%9C%AF/">艺术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BE%E8%AE%A1/">设计</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 15px;">实习</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 15px;">总结</a> <a href="/tags/Japan%F0%9F%87%AF%F0%9F%87%B5/" style="font-size: 15px;">Japan🇯🇵</a> <a href="/tags/Typography/" style="font-size: 15px;">Typography</a> <a href="/tags/%E6%80%81%E5%BA%A6/" style="font-size: 15px;">态度</a> <a href="/tags/%E9%98%85%E8%AF%BB/" style="font-size: 15px;">阅读</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 15px;">知乎</a> <a href="/tags/%E7%BE%8E%E5%AD%A6/" style="font-size: 15px;">美学</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 15px;">互联网</a> <a href="/tags/%E5%AA%92%E4%BD%93%E8%89%BA%E6%9C%AF/" style="font-size: 15px;">媒体艺术</a> <a href="/tags/UI-UX/" style="font-size: 15px;">UI/UX</a> <a href="/tags/%E5%AE%A4%E5%86%85/" style="font-size: 15px;">室内</a> <a href="/tags/%E5%8E%86%E5%8F%B2/" style="font-size: 15px;">历史</a> <a href="/tags/%E5%B1%95%E8%A7%88/" style="font-size: 15px;">展览</a> <a href="/tags/%E7%89%A9%E4%BA%8B/" style="font-size: 15px;">物事</a> <a href="/tags/%E5%B9%BF%E5%91%8A/" style="font-size: 15px;">广告</a> <a href="/tags/emoji/" style="font-size: 15px;">emoji</a> <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" style="font-size: 15px;">心理学</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/post/90eb5b4d.html">会话式UI下篇：如何从包容性视角为视障人士做会话式UI ？</a></li><li class="post-list-item"><a class="post-list-link" href="/post/55996a47.html">会话式UI上篇：从理论和历史两个角度来谈什么是会话式UI</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2faab49e.html">读一本小书：罗兰巴特的「符号帝国」</a></li><li class="post-list-item"><a class="post-list-link" href="/post/fb0ab8d3.html">面对疫情这样的复杂问题，普通人可以做什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/post/cd2c2eb9.html">二〇一九年终总结</a></li><li class="post-list-item"><a class="post-list-link" href="/post/2476f527.html">Design for Well-being | 设计中的道德伦理考量</a></li><li class="post-list-item"><a class="post-list-link" href="/post/952010dc.html">Advertising: 作为大众媒介的广告和作为视觉传达的广告</a></li><li class="post-list-item"><a class="post-list-link" href="/post/c0d43977.html">奇怪的事情</a></li><li class="post-list-item"><a class="post-list-link" href="/post/28ff60b7.html">利器访谈：ISSEI，学生及设计师，「觉论」作者</a></li><li class="post-list-item"><a class="post-list-link" href="/post/fbc4eb84.html">物事 | 如何用 Reeder 4 获取高质量的信息来源</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://ryouissei.com/" title="个人网站" target="_blank">个人网站</a><ul></ul><a href="https://lisan.io/" title="离散点" target="_blank">离散点</a><ul></ul><a href="http://richor.me/" title="Richor" target="_blank">Richor</a><ul></ul><a href="https://blog.dylanwu.space/" title="瓠樽" target="_blank">瓠樽</a><ul></ul><a href="https://blog.502.li/" title="木子" target="_blank">木子</a><ul></ul><a href="https://blog.itswincer.com/" title="Wincer's Blog" target="_blank">Wincer's Blog</a><ul></ul><a href="https://www.giuem.com/" title="BLOG @ GIUEM" target="_blank">BLOG @ GIUEM</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">觉论.</a><br/> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo. <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></a></div></script> <i class="fa fa-eye" aria-hidden="true"> </i>Total <span id="busuanzi_value_site_pv"></span> views.</div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
